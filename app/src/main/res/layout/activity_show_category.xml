@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShowCategory">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="335dp"
+        android:layout_height="50dp"
+        android:background="#718778"
+        android:gravity="center"
+        android:text="DANH SACH PHAN LOAI"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <ImageButton
+        android:id="@+id/btnAdd"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/ic_add"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/tv_null"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/tv1" />
+    <TextView
+        android:layout_marginTop="40dp"
+        android:id="@+id/id_category"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/tv_null"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Mã phân loại:"
+        android:textSize="20dp" />
+    <EditText
+        android:id="@+id/txtCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/id_category"
+        android:hint="Nhập tên phân loại"
+        app:layout_constraintBottom_toBottomOf="@id/name_category"/>
+    <TextView
+        android:layout_marginTop="50dp"
+        android:id="@+id/name_category"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/id_category"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Tên phân loại: "
+        android:textSize="20dp" />
+    <TextView
+        android:id="@+id/txtIdCategory"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/name_category"
+        android:text="Mã phân loại"
+        app:layout_constraintBottom_toBottomOf="@id/id_category"
+        android:textSize="20dp"/>
+    <Button
+        android:id="@+id/btnConfirmCategory"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Xác nhận"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/txtCategory"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="70dp"/>
+    <Button
+        android:id="@+id/btnDeleteCategory"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="Xoá"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/txtCategory"
+        app:layout_constraintStart_toEndOf="@id/btnConfirmCategory"
+        android:layout_marginLeft="40dp"/>
+    <ListView
+        android:id="@+id/lvCategory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:listSelector="#6C8779"
+        app:layout_constraintTop_toBottomOf="@+id/tv_null"
+        tools:layout_editor_absoluteX="-1dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:background="#718778"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_show_product" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

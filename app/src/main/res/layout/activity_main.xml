@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#EEE9E9">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Trang đăng nhập"
+        android:textSize="40dp"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        />
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="250dp"
+        android:text="Tài khoản:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/txtUsername"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:hint="Nhập tài khoản"
+        app:layout_constraintBottom_toBottomOf="@id/tvUserName"
+        app:layout_constraintStart_toEndOf="@id/tvUserName"
+        />
+    <TextView
+        android:id="@+id/tvPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Mật khẩu:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@id/tvUserName"
+        app:layout_constraintTop_toBottomOf="@id/tvUserName"
+        />
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:hint="Nhập mật khẩu"
+        app:layout_constraintBottom_toBottomOf="@id/tvPassword"
+        app:layout_constraintStart_toEndOf="@id/tvUserName"
+        android:inputType="textPassword"
+        />
+    <TextView
+        android:id="@+id/validate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sai tên đăng nhập hoặc mật khẩu"
+        app:layout_constraintTop_toBottomOf="@id/txtPassword"
+        app:layout_constraintStart_toStartOf="@id/tvPassword"
+        android:textColor="#FF0000"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:visibility="invisible"
+        />
+    <Button
+        android:id="@+id/confirmLogin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Đăng nhập"
+        app:layout_constraintTop_toBottomOf="@id/validate"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="100dp"
+        android:backgroundTint="@color/gray"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetails">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#718778"
+        android:gravity="center"
+        android:text="THÔNG TIN SẢN PHẨM"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_product_details"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_margin="110dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvName_details"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Tên sản phẩm:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_product_details" />
+
+    <EditText
+        android:id="@+id/txtProductName_details"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="Nước ngọt 7up"
+        app:layout_constraintBottom_toBottomOf="@id/tvName_details"
+        app:layout_constraintStart_toEndOf="@id/tvName_details" />
+
+    <TextView
+        android:id="@+id/tvPrice_details"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Giá:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvName_details" />
+
+    <EditText
+        android:id="@+id/txtProductPrice_details"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:text="10000"
+        app:layout_constraintBottom_toBottomOf="@id/tvPrice_details"
+        app:layout_constraintStart_toEndOf="@id/tvPrice_details" />
+
+    <EditText
+        android:id="@+id/txtProductDescription_details"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Nước ngọt 7up hương chanh tự nhiên"
+        app:layout_constraintBottom_toBottomOf="@id/tvDescription_details"
+        app:layout_constraintStart_toEndOf="@id/tvDescription_details" />
+
+    <TextView
+        android:id="@+id/tvDescription_details"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Mô tả:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPrice_details" />
+
+    <EditText
+        android:id="@+id/txtProductCategory_details"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Nước ngọt có gas"
+        app:layout_constraintBottom_toBottomOf="@id/tvCategory_details"
+        app:layout_constraintStart_toEndOf="@id/tvDescription_details" />
+
+    <TextView
+        android:id="@+id/tvCategory_details"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Loại sản phẩm:"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDescription_details" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom"
+        android:background="#718778"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_show_product" />
+</androidx.constraintlayout.widget.ConstraintLayout>
